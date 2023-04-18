@@ -7,18 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schatroom List</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <?php
         //include('auth.php');
         include('connection.php');
     
     ?>
+    <script>
+        function createModal(){
+            //function
+        }
+    </script>
 </head>
 <body>
     <header class="p-4 font-weight-normal border-bottom row">
         <h2 class="col">Welcome <?php echo $_SESSION['user'] ?>!</h2>
         <form action="croom.php" method="post">
-        <button type="submit" name="createRoom" class="btn btn-success rounded-3 mx-4">New Chatroom <img src="./icons/comment-regular.svg" width="18px" alt="message Icon"></button>
+        <button name="newCroom" onclick="createModal()" class="btn btn-success rounded-3 mx-4">New Chatroom <img src="./icons/comment-regular.svg" width="18px" alt="message Icon"></button>
         </form>
     </header>
     <content class="container">
