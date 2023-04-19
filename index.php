@@ -14,38 +14,25 @@
             <p>  
                 <label> UserName: </label>  
                 <input type = "text" id ="user" name  = "user" />  
-            </p>  
-            <p>  
-                <label> Password: </label>  
-                <input type = "password" id ="pass" name  = "pass" />  
-            </p>  
+            </p>   
             <p>     
                 <input type =  "submit" id = "btn" value = "Login" class="btn btn-success"/>  
             </p>
-            <a href="signup.php">new user? signup.</a>  
         </form>  
     </div>    
     <script>  
             function validation()  
             {  
-                var id=document.f1.user.value;  
-                var ps=document.f1.pass.value;  
-                if(id.length=="" && ps.length=="") {  
-                    alert("User Name and Password fields are empty");  
+                var id=document.f1.user.value;    
+                if(id.length==0) {  
+                    alert("User Name field is empty");  
                     return false;  
-                }  
-                else  
-                {  
-                    if(id.length=="") {  
-                        alert("User Name is empty");  
-                        return false;  
-                    }   
-                    if (ps.length=="") {  
-                    alert("Password field is empty");  
-                    return false;  
-                    }  
-                }                             
-            }  
+                }
+                else if(id.length > 8) {
+                        alert("User Name should be less than 8");
+                        return false;
+                    }
+                }
         </script>  
 </body>     
 </html>

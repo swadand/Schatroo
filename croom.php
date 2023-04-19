@@ -29,10 +29,6 @@
     </header>
     <content class="container">
         <?php 
-             if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['createRoom']))
-             {
-                
-             }
 
             $query_chatroom = "select rname, chatters from chatroom";
             $chatroom_home_query= mysqli_query($con, $query_chatroom);

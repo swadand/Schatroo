@@ -9,13 +9,13 @@
 
     $rname = $_POST['rname'];
     $msg = $_POST['msg'];
-    $msg_query= "insert into ".$rname." (uname, umsg) values('".$_SESSION['user']."', '".$msg."')";
+    $msg_query= "insert into `".$rname."` (uname, umsg) values('".$_SESSION['user']."', '".$msg."')";
     $msgres = mysqli_query($con, $msg_query);
     loadChat($con, $rname);
 
-    echo "<form action=\"create.php\" method=\"post\">
+	echo "<form action=\"create.php\" method=\"post\">
         <div class=\"input-group fixed-bottom\">
-            <input type=\"text\" name=\"msg\" class=\"input-group-text\" placeholder=\".....\" />
-            <button type=\"submit\" name=\"rname\" value=\"".$rname."\"/>-></button>
+        <input type=\"text\" name=\"msg\" class=\"input-group-text\" placeholder=\".....\" />
+       	<button class=\"btn btn-success\" type=\"submit\" name=\"rname\" value=\"".$rname."\"/>-></button>
         </div></form></body>";
 ?> 

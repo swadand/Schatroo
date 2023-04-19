@@ -1,7 +1,7 @@
 <?php
 include("connection.php");
 function loadChat(mysqli $con, string $rname){
-    $chat_query= "select * from ".$rname;
+    $chat_query= "select * from `".$rname."`";
         $chat = mysqli_query($con, $chat_query);
         if ($chat){
             $chatNum = mysqli_num_rows($chat);
