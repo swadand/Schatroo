@@ -10,13 +10,13 @@
 <body>  
     <div id = "frm" class="container mx-auto text-center mt-5">  
         <h1>Login</h1>  
-        <form name="f1" action = "auth.php" onsubmit = "return validation()" method = "POST">  
+        <form name="f1" action = "auth.php" onsubmit = "return validation()" autocomplete="off" method = "POST">  
             <p>  
                 <label> UserName: </label>  
-                <input type = "text" id ="user" name  = "user" />  
+                <input type = "text" id ="user" name  = "user" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');"/>  
             </p>   
             <p>     
-                <input type =  "submit" id = "btn" value = "Login" class="btn btn-success"/>  
+                <input type =  "submit" id = "btn" value = "Login" class="btn btn-success" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');"/>  
             </p>
         </form>  
     </div>    

@@ -43,9 +43,9 @@
                             <h5 class="modal-title" id="modalTitleId">New Room</h5>
                             <button type="button" class="btn btn-danger btn-close" data-dismiss="modal" aria-label="Close">X</button>
                         </div>
-                        <form action="signup.php" onsubmit = "return validation()" method="post" name="newRoom">
+                        <form action="signup.php" onsubmit = "return validation()" method="post" name="newRoom" autocomplete="off">
                         <div class="modal-body">
-                            <input type="text" name="rname" placeholder="New Chatroom Name" id="">
+                            <input type="text" name="rname" placeholder="New Chatroom Name" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
                         </div>
                         <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary mx-auto">Create</button>

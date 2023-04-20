@@ -15,9 +15,9 @@
 
     loadChat($con, $rname);
 
-    echo "<form action=\"create.php\" class=\"row\" method=\"post\">
+    echo "<form action=\"create.php\" class=\"row\" method=\"post\" autocomplete=\"off\">
         <div class=\"input-group fixed-bottom\">
-            <input type=\"text\" name=\"msg\" class=\"input-group-text col\" placeholder=\"Your Message\" />
+            <input type=\"text\" name=\"msg\" class=\"input-group-text col\" placeholder=\"Your Message\" autocomplete=\"off\" readonly onfocus=\"this.removeAttribute('readonly');\"/>
             <button class=\"btn btn-success\" type=\"submit\" name=\"rname\" value=\"".$rname."\"/>-></button>
         </div></form></body>";
 ?>
