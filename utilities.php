@@ -1,7 +1,7 @@
 <?php
 include("connection.php");
 function loadChat(mysqli $con, string $rname){
-    $chat_query= "select * from `".$rname."`";
+    $chat_query= "select * from `".$rname."` order by created desc";
         $chat = mysqli_query($con, $chat_query);
         if ($chat){
             $chatNum = mysqli_num_rows($chat);
@@ -12,7 +12,7 @@ function loadChat(mysqli $con, string $rname){
     if ($chatNum > 0){
         echo "<div class=\"container\"><table class=\"table table-striped\">";
         while($row=mysqli_fetch_array($chat, MYSQLI_ASSOC)){
-            echo "<tr><td class=\"col-6\"><h5>".$row['uname']."</h5><p>".$row['umsg']."</p></td></tr>";
+            echo "<tr><td class=\"col-6\">".$row['uname']."<p>".$row['umsg']."</p></td></tr>";
         }echo "</table></div>";
     }
     else

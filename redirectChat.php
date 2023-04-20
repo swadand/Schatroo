@@ -15,9 +15,11 @@
 
     loadChat($con, $rname);
 
-    echo "<form action=\"create.php\" method=\"post\">
+    echo "<form action=\"create.php\" class=\"row\" method=\"post\">
         <div class=\"input-group fixed-bottom\">
-            <input type=\"text\" name=\"msg\" class=\"input-group-text\" placeholder=\".....\" />
+            <input type=\"text\" name=\"msg\" class=\"input-group-text col\" placeholder=\"Your Message\" />
             <button class=\"btn btn-success\" type=\"submit\" name=\"rname\" value=\"".$rname."\"/>-></button>
         </div></form></body>";
 ?>
+
+
