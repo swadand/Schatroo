@@ -21,10 +21,3 @@
             <button class=\"btn btn-success\" type=\"submit\" name=\"rname\" value=\"".$rname."\"/>-></button>
         </div></form></body>";
 ?> 
-<script type="text/javascript">
-  window.onafterunload = confirmExit();
-  function confirmExit()
-  {
-    location = 'croom.php';
-  }
-</script>
