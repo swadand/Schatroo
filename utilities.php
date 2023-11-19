@@ -1,5 +1,29 @@
 <?php
-include("connection.php");
+//include("connection.php");
+
+function base_path() { 
+    return __DIR__;
+}
+
+function controller_path($path) { 
+    return __DIR__ . str_replace('/', DIRECTORY_SEPARATOR, "/Https/controllers/") . $path;
+}
+
+function view(string $view) {
+    return base_path() . str_replace('/', DIRECTORY_SEPARATOR, "/views/") . $view . ".view.php";
+}
+
+function redirect(string $url) {
+    header($url);
+    exit();
+}
+
+function abort(int $code = 404) {
+    http_response_code(404);
+    require view($code);
+    exit();
+}
+
 function loadChat(mysqli $con, string $rname){
     $chat_query= "select * from `".$rname."` order by created desc";
         $chat = mysqli_query($con, $chat_query);
@@ -19,4 +43,4 @@ function loadChat(mysqli $con, string $rname){
         echo "<div class=\"container mx-auto my-5 h2 text-center\">So empty.<br>Begin a conversation (●'◡'●)</div>";
 }
 
-?>
+

@@ -1,0 +1,23 @@
+{
+    "name": "swadand/schatroo",
+    "description": "none",
+    "require": {
+        "pestphp/pest": "^2.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core\\"
+        }
+    },
+    "authors": [
+        {
+            "name": "swadand",
+            "email": "lwinseverytime@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
