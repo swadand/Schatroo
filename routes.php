@@ -1,8 +1,7 @@
 <?php
 
-use Core\Route;
-
 //var_dump("reached route");
-$uri = $_SERVER['REQUEST_URI'];
+$router->get('/', 'index.php');
+$router->get('/chats', 'chats.php');
 
-require Route::get($uri);
+$router->get('/404', 'error_page.php');

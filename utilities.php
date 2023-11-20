@@ -1,16 +1,13 @@
 <?php
-//include("connection.php");
 
-function base_path() { 
-    return __DIR__;
-}
+const BASE_PATH = __DIR__;
 
 function controller_path($path) { 
-    return __DIR__ . str_replace('/', DIRECTORY_SEPARATOR, "/Https/controllers/") . $path;
+    return BASE_PATH . str_replace('/', DIRECTORY_SEPARATOR, "/Https/controllers/") . $path;
 }
 
 function view(string $view) {
-    return base_path() . str_replace('/', DIRECTORY_SEPARATOR, "/views/") . $view . ".view.php";
+    return BASE_PATH . str_replace('/', DIRECTORY_SEPARATOR, "/views/") . $view . ".view.php";
 }
 
 function redirect(string $url) {
